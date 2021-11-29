@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Call of Duty | Cadastro </title>
+
+    
+    <script src="./assets/js/funcoes.js"></script>
+    
+    
+    <link rel="icon" href="./assets/icon/favicon.ico">
+    <link rel="stylesheet" href="sitestyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bodycadastro">
+
+    <div class="header">
+
+        <div class="container1">
+
+            <img id="warzonelogo" src="./imagens/logo call of duty header.png">
+        </div>
+
+
+        <div class="container">
+        <ul class="navbar">
+
+                <li>
+                <li class="agora">
+                    <a class="links" href="./index.html"> Inicial</a>
+                </li>
+                <li>
+                    <a class="links" href="./camp.html">Championship</a>
+                </li>
+                <li>|</li>
+                
+                <li>
+                    <a class="links" href="./login.html">Login</a>
+                </li>
+                <li>
+                    <a class="links" href="./cadastro.html">Cadastro</a>
+                </li>
+        </ul>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="banner-login ">
+        <div class="container ">
+            <div class="card medio">
+                <h2>Bem-vindo Pro-Player!</h2>
+                <div class="formulario">
+                    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                        Nickname:
+                        <input name="nome" type="text" placeholder="SweezhIV">
+                        <br>
+                        E-mail:
+                        <input name="email" type="text" placeholder="johnatanmoreira@bandtec.com.br">
+                        <br>
+                        Senha:
+                        <input name="senha" type="password" placeholder="******">
+                        <br>
+                        Confirmação da Senha:
+                        <input name="senhaconfirmada" type="password" placeholder="******">
+                        <br>
+                        <button onclick="cadastrar()" class="btn">Cadastrar</button>
+                    </form>
+                </div>
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h4>Call of Duty &copy; 2021</h4>
+    </footer>
+    
+
+</body>
+
+</html>
+
+<script>
+
+    function form_limpeza() {
+        document.getElementById("form_cadastro").reset();
+    }
+
+    function cadastro() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_cadastro")));
+
+        var nickname = formulario.get("nickname");
+        var email = formulario.get("email");
+        var senha = formulario.get("senha");
+        var senhaconfirmada = formulario.get("senhaconfirmada");
+        if (nickname == "" || email == "" || senha == "" || senhaconfirmada == "") {
+            
+            window.alert("Preencha todos os campos para continuar!");
+            if (nickname == "")  {
+                console.log('nome está em branco')
+            }
+            if (email == "" )  {
+                console.log('email está em branco')
+            }
+            if (senha == "" )  {
+                console.log('senha está em branco')
+            }
+            if (senhaconfirmada == "" )  {
+                console.log('confirmação de senha está em branco')
+            }
+            finalizarAguardar();
+            return false;
+        }
+        
+        if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+            return false;
+        }
+        
+        if (senha != confirmacaoSenha) {
+            window.alert("As senhas inseridas devem ser iguais para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuario/cadastrar", {
+            method: "get",
+            body: formulario
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                form_limpeza();
+                finalizarAguardar();
+            } else {
+                throw("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+</script>

@@ -1,0 +1,754 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: 'roboto';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/9d230268957795.5b6f9d36973fe.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed ;        
+    overflow: scroll;
+    
+}
+
+.bodycadastro {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-image: url("https://xboxplay.games/uploadStream/17007.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed ;        
+    overflow: scroll;
+    
+}
+
+
+.container {
+    width: auto;
+    margin: auto;
+}
+
+#warzonelogo {
+
+    width: 255px;
+margin-left: 50px;
+}
+
+
+.header {
+    background: linear-gradient(45deg, rgb(255, 115, 0), black);
+    border-bottom: 3px solid rgb(255, 115, 0);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+.titulo_sobre{
+    margin-top: 250px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo_sobre h1{
+    padding: 7px;
+    background-color: rgba(255, 115, 0, 0.733);
+    border-radius: 10px;
+    color: white;
+}
+
+.links {
+
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  
+}
+
+.links:hover {
+  background-color: rgb(255, 115, 0);
+  color: white;
+  border-radius: 20px;
+
+}
+
+.container1{
+    margin-right: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.container1 h2{
+    margin-left: 30%;
+}
+
+
+
+.agora {
+    font-weight: 800;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: rgb(255, 115, 0);
+}
+
+
+.bannerindex {
+    width: 100%;
+    margin-top: 10%;
+    color: white;
+    background-size: cover;
+    background-image: url();
+    
+}
+
+.bannerindex .container {
+    display: flex;
+}
+
+.bannerindex p {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    font-size: 36px;
+    margin-left: 350px;
+}
+
+.bannerindex span {
+    font-weight: 800;
+}
+
+
+.social {
+    background-color: #E5E5E5;
+    padding: 50px 0;
+}
+
+.social .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+.social .titulo {
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.social h2 {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    align-self: center; 
+    justify-self: center;
+    text-align: center;
+    color: rgb(255, 115, 0);
+    margin: 0;
+   
+}
+
+.social .boxes {
+    display: flex;
+   
+}
+
+.social .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    
+}
+
+.social .box img {
+    width: 150px;
+    align-self: center;
+}
+
+.social .box h4 {
+    color: rgb(255, 115, 0);
+    margin-top: 30px;
+}
+
+
+footer {
+    background: linear-gradient(45deg, rgb(255, 115, 0), black);;
+    height: 60px;
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    position: fixed;
+    border-top: rgb(255, 115, 0) solid 2px;
+}
+
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.banner-login {
+    color: white;
+    height: 550px;
+    background-image: url(".././assets/imgs/bg-jelly-fish-para_outras_pags.png");
+    background-size: cover;
+}
+
+.banner-login .container {
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-login {
+    color: white;
+}
+
+.banner-login .card {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 450px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    border: 2px solid rgb(255, 115, 0);
+}
+
+
+.banner-login a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner-login #div_erros_login {
+    margin-top: 15px;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+input {
+    height: 30px;
+    border: 2px solid rgb(255, 115, 0);
+    border-radius: 10px;
+}
+
+.btn {
+    font-family: 'Exo 2', sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgb(255, 115, 0);
+    width: 120px;
+    align-self: center;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+}
+
+.loading-div img {
+    height: 50px;
+    width: 50px;
+}
+
+
+.janela {
+    display: flex;
+    width: 100vw;
+}
+
+.header-left a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 3px solid rgb(255, 115, 0);
+    background-color: #212124;
+}
+
+.dash-right {
+    display: flex;
+    width: 75%;
+    height: fit-content;
+    background-color: #161618;
+    position: relative;
+    top: 0;
+    left: 25%;
+}
+
+.header-left h1 {
+    color: #32B9CD;
+}
+
+.hello {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hello h3 {
+    color: #E3B062;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.hello h3 span {
+    font-weight: 800;
+}
+
+.btn-nav {
+    width: 40%;
+    color: white;
+    background-color: rgb(255, 115, 0);
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
+}
+
+.btn-nav-white {
+    width: 40%;
+    background-color: white;
+    border: 3px solid rgb(255, 115, 0);
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
+}
+
+.btn-nav-white h3 {
+    color: rgb(255, 115, 0);
+    padding: 0;
+    margin: 0;
+}
+
+
+.btn-nav h3, .btn-logout h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-logout {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+.simulador {
+    color: white;
+}
+
+
+.container_campeonato{
+    margin: 40px;
+    margin-bottom: 80px;
+}
+
+.esquerda img{
+    width: 500px;
+    
+}
+
+.direia img{
+    width: 100px;
+    
+}
+
+.esquerda{
+    margin-left:30px;
+    margin-right:30px;
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid gray;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.direita{
+    margin-left:30px;
+    margin-right:30px;
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid rgb(255, 115, 0);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+
+.esquerda div{
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    
+}
+
+.direita div{
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.camp_titulo{
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.background-camp{
+    background-color: rgba(0, 0, 0, 0.767);
+}
+
+.container_botao button{
+    padding: 25px;
+    width: 200px;
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(255, 115, 0);
+    border: none;
+    transition: 0.2s;
+}
+
+.container_botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_botao button:hover {
+  background-color: rgb(255, 115, 0);
+  }
+
+  .quadros{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin: 40px;
+      margin-top: 40px;
+      padding: 40px;
+      margin-bottom: 50px;
+  }
+
+  .quadro1{
+      width: 300px;
+      height: 600px;
+      border: 3px solid rgb(255, 115, 0);
+      margin-right: 40px;
+      background-image: url("./imagens/pistol.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+  }
+
+  .quadro2{
+    width: 300px;
+    height: 600px;
+    border: 3px solid rgb(255, 115, 0);
+    margin-right: 40px;
+    background-image: url("./imagens/assaunt.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.quadro3{
+    width: 300px;
+    height: 600px;
+    border: 3px solid rgb(255, 115, 0);
+    margin-right: 40px;
+    background-image: url("./imagens/snipers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.quadro4{
+    width: 300px;
+    height: 600px;
+    border: 3px solid rgb(255, 115, 0);
+    margin-right: 40px;
+    background-image: url("./imagens/melee.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+}
+.quadro5{
+    width: 300px;
+    height: 600px;
+    border: 3px solid rgb(255, 115, 0);
+    margin-right: 40px;
+    background-image: url("./imagens/submachinegun.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+}
+
+
+.quadro1 h2{
+    background-color: rgba(49, 47, 47, 0.562);
+    padding: 10px;
+    border-radius: 15px;
+    border: 0.5px solid rgb(255, 115, 0);
+}
+
+.quadro2 h2{
+    background-color: rgba(49, 47, 47, 0.562);
+    padding: 10px;
+    border-radius: 15px;
+    border: 0.5px solid rgb(255, 115, 0);
+}
+
+.quadro3 h2{
+    background-color: rgba(49, 47, 47, 0.562);
+    padding: 10px;
+    border-radius: 15px;
+    border: 0.5px solid rgb(255, 115, 0);
+}
+
+.quadro4 h2{
+    background-color: rgba(49, 47, 47, 0.562);
+    padding: 10px;
+    border-radius: 15px;
+    border: 0.5px solid rgb(255, 115, 0);
+}
+.quadro5 h2{
+    background-color: rgba(49, 47, 47, 0.562);
+    padding: 10px;
+    border-radius: 15px;
+    border: 0.5px solid rgb(255, 115, 0);
+}
+
+.grafico{
+    border: 3px solid rgb(255, 115, 0);
+    margin: 40px;
+    padding: 30px;
+    height: 500px;
+    
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+.graf{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 40px;
+      padding: 40px;
+      margin-bottom: 50px;
+}
+
+.titulo_grafs{
+    margin-top: 250px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo_grafs h1{
+    padding: 7px;
+    background-color: rgba(255, 115, 0, 0.733);
+    border-radius: 10px;
+    color: white;
+}
+
+.btn_voltar{
+    padding: 25px;
+    width: 200px;
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(255, 115, 0);
+    border: none;
+    transition: 0.2s;
+    border-radius: 10px;
+    
+}
+
+.btn_voltar:hover {
+    background-color: rgb(255, 115, 0);
+    }
+
+.texto{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 40px;
+    flex-direction: column;
+}
+
+.gifs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 40px;
+    margin-top: 40px;
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.gif1{
+    width: 600px;
+    height: 600px;
+    border: 3px solid rgb(255, 115, 0);
+    margin-right: 40px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+}
+
+.gif2{
+  width: 600px;
+  height: 600px;
+  border: 3px solid rgb(255, 115, 0);
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+}
+
+.gif3{
+  width: 600px;
+  height: 600px;
+  border: 3px solid rgb(255, 115, 0);
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+}
+
+.gif{
+  width: 600px;
+  height: 600px;
+  border: 3px solid rgb(255, 115, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+}

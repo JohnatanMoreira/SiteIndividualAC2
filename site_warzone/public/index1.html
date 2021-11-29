@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Call of Duty | Página Inicial </title>
+
+
+    <script src="./assets/js/funcoes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="utils.js"></script>
+    <link rel="icon" href="./assets/icon/favicon.ico">
+    <link rel="stylesheet" href="sitestyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body">
+    <div class="header">
+
+        <div class="container1">
+
+            <img id="warzonelogo" src="./imagens/logo call of duty header.png">
+           
+        </div>
+        
+
+        <div class="container">
+            <ul class="navbar">
+
+                <li>
+                <li class="agora">
+                    <a class="links" href="./index1.html"> Inicial </a>
+                </li>
+                <li>
+                    <a class="links" href="./camp1.html">Championship</a>
+                </li>
+                <li>
+                    <a class="links" href="./dashboard.html">Dashboard</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a class="links" href="./index.html">Sair</a>
+                </li>
+        </ul>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="bannerindex">
+        <div class="container_p">
+            <p>
+                Bem vindo ao <span> Call of Duty <br></span> O game <span> Best-Seller </span> do século 21.
+            </p>
+        </div>
+    </div>
+    <div class="titulo_sobre">
+        <h1>Sobre o Call of Duty</h1><br><br>
+        
+        <h3>Call of Duty (frequentemente abreviado como CoD) é uma série de jogos eletrônicos de guerra, ação e tiro em primeira pessoa publicado pela Activision e desenvolvida pela Infinity Ward, pela Sledgehammer Game Studio e pela Treyarch, com as empresas se revezando a cada lançamento. O primeiro título da série começou no computador, mais tarde expandindo-se para os vários tipos de consoles. Também foram lançados vários jogos spin-off. Os primeiros títulos da série se concentraram em jogos ambientados na Segunda Guerra Mundial, apresentando batalhas e acontecimentos históricos daquele período. Com o tempo, a série viu jogos ambientados na Guerra Fria, em tempos atuais, mundos futuristas até o espaço sideral.
+
+            Os jogos da série Call of Duty são publicados e propriedade da Activision. Enquanto que o estúdio Infinity Ward ainda é o principal produtor, a Treyarch também já produziu alguns títulos onde a história está interligada entre eles. Alguns jogos já foram produzidos pela Gray Matter Interactive, Nokia, Exakt Entertainment, Spark Unlimited, Amaze Entertainment, n-Space, Aspyr, Rebellion Developments, Ideaworks Game Studio, Sledgehammer Games e nStigate Games. Os jogos usam vários motores incluindo id Tech 3, o Treyarch NGL e o IW 5.0.
+            
+            Em janeiro de 2016, já tinham sido vendidas mais de 250 milhões de cópias de jogos Call of Duty.[1] Em particular, Call of Duty: Black Ops é o jogo mais vendido da série, com um total de 30.5 milhões de cópias vendidas. De acordo com a Activision, as vendas dos jogos Call of Duty já ultrapassaram os US$15 bilhões.</h3>
+    </div>
+    <div class="gifs">
+        <div class="gif1">
+            <img src=".\imagens\gif parachute.gif" alt="">
+        </div>
+        <div class="gif2">
+            <img src=".\imagens\gif prison.gif"" alt="">
+        </div>
+        <div class="gif3">
+            <img src=".\imagens\sniper kill double.gif"" alt="">
+        </div>
+    </div>
+<div class="titulo_grafs">
+
+    <h1>Clique para ver a classe mais utilizada na semana!</h1><br><br>
+    
+</div>
+    <div id="qds" class="quadros">
+
+        <div class="quadro1" onclick="ver_graf()"><h2>PISTOLS</h2></div>
+        <div class="quadro2" onclick="ver_graf()"><h2>ASSAULTS</h2></div>
+        <div class="quadro3" onclick="ver_graf()"><h2>SNIPERS</h2></div>
+        <div class="quadro4" onclick="ver_graf()"><h2>MELEES</h2></div>
+        <div class="quadro5" onclick="ver_graf()"><h2>SUBMACHINEGUNS</h2></div>
+    </div>
+    <div class="titulo_grafs">
+
+        
+        <button id="btn" class="btn_voltar"onclick="voltar()" style="display: none;">Voltar</button>
+    </div>
+    <div id="grafico_armas" class="graf" style="display: none;">
+    <div class="grafico">
+            <canvas id="myChart" style="width: 100%; height: 100%;"> </canvas>
+        
+    </div>
+</div>
+    <footer>
+        <h4>Call of Duty &copy; 2021</h4>
+    </footer>
+</body>
+
+</html>
+
+<script>
+   function grafico(){
+       var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['NÚMERO DE USOS'],
+            datasets: [{
+                label: 'PISTOLS',
+                data: [4],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)'
+
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)'
+
+                ],
+                borderWidth: 1
+            },{
+                label: "ASSAULTS",
+                data: [6],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.2)'
+
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)'
+
+                ],
+                borderWidth: 1
+            },{
+                label: "SNIPERS",
+                data: [7],
+                backgroundColor: [
+                    'rgba(255, 206, 86, 0.2)'
+
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)'
+
+                ],
+                borderWidth: 1
+            },{
+                label: "MELEES",
+                data: [8],
+                backgroundColor: [
+                    'rgba(255, 159, 64, 0.2)',
+
+                ],
+                borderColor: [
+                    'rgba(153, 102, 255, 1)'
+
+                ],
+                borderWidth: 1
+            },{
+
+                label: "SUBMACHINEGUNS",
+                data: [8],
+                backgroundColor: [
+                    'rgba(255, 159, 64, 0.2)',
+
+                ],
+                borderColor: [
+                    'rgba(302, 266, 181, 1)'
+
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+         function ver_graf(){
+            grafico_armas.style.display = 'block';
+            btn.style.display = 'block';
+            grafico();
+            window.scroll(0, 2000);
+         }
+
+         function voltar(){
+            grafico_armas.style.display = 'none';
+            btn.style.display = 'none';
+            window.scroll(0, 0);
+         }
+</script>
