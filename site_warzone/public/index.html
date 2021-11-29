@@ -115,6 +115,14 @@
 </html>
 
 <script>
+    function ver_graf(){
+            grafico_armas.style.display = 'block';
+            btn.style.display = 'block';
+            armas();
+            grafico();
+            window.scroll(0, 2000);
+         }
+   
    function grafico(){
        var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
@@ -124,7 +132,7 @@
             datasets: [{
                 label: 'PISTOLS',
                 
-                data: [5],
+                data: [valorarmas[4]],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)'
 
@@ -136,7 +144,7 @@
                 borderWidth: 1
             },{
                 label: "ASSAULTS",
-                data: [6],
+                data: [valorarmas[3]],
                 backgroundColor: [
                     'rgba(54, 162, 235, 0.2)'
 
@@ -148,7 +156,7 @@
                 borderWidth: 1
             },{
                 label: "SNIPERS",
-                data: [7],
+                data: [valorarmas[2]],
                 backgroundColor: [
                     'rgba(255, 206, 86, 0.2)'
 
@@ -160,7 +168,7 @@
                 borderWidth: 1
             },{
                 label: "MELEES",
-                data: [8],
+                data: [valorarmas[1]],
                 backgroundColor: [
                     'rgba(255, 159, 64, 0.2)',
 
@@ -171,7 +179,7 @@
                 ],
                 borderWidth: 1
             },{label: "SUBMACHINEGUNS",
-                data: [9],
+                data: [valorarmas[0]],
                 backgroundColor: [
                     'rgba(255, 159, 64, 0.2)',
 
@@ -192,16 +200,25 @@
         }
     });
 }
-         function ver_graf(){
-            grafico_armas.style.display = 'block';
-            btn.style.display = 'block';
-            grafico();
-            window.scroll(0, 2000);
-         }
+        
 
          function voltar(){
             grafico_armas.style.display = 'none';
             btn.style.display = 'none';
             window.scroll(0, 0);
          }
+
+
+         var valorarmas = [];
+
+function armas(){
+
+for (var index = 0; index < 5; index++) {
+    var aleatorio = (Math.random()*99+1).toFixed(0);
+
+    valorarmas.push(aleatorio);
+
+}
+
+}
 </script>
