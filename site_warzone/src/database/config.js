@@ -1,34 +1,16 @@
 var mysql = require("mysql2");
 var sql = require('mysql2');
 
-// CONEXÃO DO SQL SERVER - AZURE (NUVEM)
-var sqlServerConfig = {
-    user: "cultivo123@cultivo",
-    password: "cultivo@123",  
-    database: "Cultivo",
-    server: "cultivo.mysql.database.azure.com",
-    pool: {
-        max: 10,
-        min: 0,
-        idleTimeoutMillis: 30000
-    },
-    options: {  
-        encrypt: true, // for azure
-    }
-}
-
-// CONEXÃO DO MYSQL WORKBENCH (LOCAL)
 var mySqlConfig = {
     host: "localhost",
     user: "root",
-    database: "cultivo",
-    password: "kaue4991",
+    database: "individual",
+    password: "1234",
     port: "3306",
 };
 
 
 function executar(instrucao) {
-    // VERIFICA A VARIÁVEL DE AMBIENTE SETADA EM app.js
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         return new Promise(function (resolve, reject) {
             sql.connect(sqlServerConfig).then(function () {

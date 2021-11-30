@@ -2,27 +2,37 @@ var database = require("../database/config")
 
 
 
-function entrar(email, senha) {
+function entrar(nickname, senha) {
     console.log("ACESSEI O LOGIN MODEL")
     var instrucao = `
-    SELECT * FROM usuario JOIN empresa join estufa WHERE email = '${email}' AND senha = '${senha}' and usuario.FkEmpresa = empresa.Idempresa and empresa.idEmpresa = estufa.FkEmpresa;
+    SELECT * FROM cadastro WHERE nickname = '${nickname}' AND senha = '${senha}';
     `;
     console.log("Executando a instrução SQL: \n"+instrucao);
     return database.executar(instrucao);
 }
 
-function cadastrar(nome, email, senha, fkEmpresa) {
+function cadastrar(nickname, senha, email, fkjogofavorito) {
     console.log("ACESSEI O CADASTRO MODEL");
     var instrucao = `
-        INSERT INTO usuario (Usuário, email, senha, fkEmpresa) VALUES ('${nome}', '${email}', '${senha}', ${fkEmpresa});
+        INSERT INTO cadastro (nickname, senha, email, fkjogofavorito) VALUES ('${nickname}', '${senha}', '${email}', ${fkjogofavorito});
     `;
     console.log("Executando a instrução SQL: \n"+instrucao);
     return database.executar(instrucao);
 }
+function listar(){
+    console.log("ACESSEI A CADASTRO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+    var instrucao = `
+        SELECT 
+        count (idcadastro) as quantidadedejogadores
+        From cadastro`;
+        return database.executar(instrucao);
+}
+
 
 
 
 module.exports = {
     entrar,
     cadastrar,
+    listar
 };

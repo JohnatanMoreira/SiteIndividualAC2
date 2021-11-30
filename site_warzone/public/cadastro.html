@@ -59,9 +59,19 @@
             <div class="card medio">
                 <h2>Bem-vindo Pro-Player!</h2>
                 <div class="formulario">
-                    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                    <form id="form_cadastro" method="post" onsubmit="return cadastro()">
                         Nickname:
-                        <input name="nome" type="text" placeholder="SweezhIV">
+                        <input name="nickname" type="text" placeholder="SweezhIV">
+                        <br>
+                        COD Favorito:
+                        <select name="jogofavorito" id="game">
+                            <option value="">SELECIONE O JOGO</option>
+                            <option value="1">MODERN WARFARE</option>
+                                <option value="2">ADVANCED WARFARE</option>
+                                    <option value="3">BLACK OPS 4</option>
+                                        <option value="4">BLACK OPS 2</option>
+                                            <option value="5">COD WARZONE</option>
+                        </select>
                         <br>
                         E-mail:
                         <input name="email" type="text" placeholder="johnatanmoreira@bandtec.com.br">
@@ -72,7 +82,7 @@
                         Confirmação da Senha:
                         <input name="senhaconfirmada" type="password" placeholder="******">
                         <br>
-                        <button onclick="cadastrar()" class="btn">Cadastrar</button>
+                        <button class="btn">Cadastrar</button>
                     </form>
                 </div>
                 <div id="div_aguardar" class="loading-div">
@@ -100,17 +110,19 @@
     function form_limpeza() {
         document.getElementById("form_cadastro").reset();
     }
-
+    
     function cadastro() {
-        aguardar();
-
+        
+        
+        
         var formulario = new URLSearchParams(new FormData(document.getElementById("form_cadastro")));
 
         var nickname = formulario.get("nickname");
         var email = formulario.get("email");
         var senha = formulario.get("senha");
         var senhaconfirmada = formulario.get("senhaconfirmada");
-        if (nickname == "" || email == "" || senha == "" || senhaconfirmada == "") {
+        var jogofavorito = formulario.get("jogofavorito");
+        if (nickname == "" || email == "" || senha == "" || senhaconfirmada == ""|| jogofavorito == "") {
             
             window.alert("Preencha todos os campos para continuar!");
             if (nickname == "")  {
@@ -122,27 +134,35 @@
             if (senha == "" )  {
                 console.log('senha está em branco')
             }
+            if (jogofavorito == ""){
+                console.log('o cod favorito está em branco')
+            }
             if (senhaconfirmada == "" )  {
                 console.log('confirmação de senha está em branco')
             }
-            finalizarAguardar();
+            
             return false;
         }
-        
+
         if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
             window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            finalizarAguardar();
+           
             return false;
         }
         
-        if (senha != confirmacaoSenha) {
+        if (senha != senhaconfirmada) {
             window.alert("As senhas inseridas devem ser iguais para prosseguir!");
-            finalizarAguardar();
+            
+            return false;
+        }
+        if (jogofavorito == "SELECIONE O JOGO") {
+            window.alert("Selecione o jogo preferido para prosseguir");
+           
             return false;
         }
 
         fetch("/usuario/cadastrar", {
-            method: "get",
+            method: "POST",
             body: formulario
         }).then(function (resposta) {
 
@@ -152,13 +172,13 @@
                 window.alert("Cadastro realizado com sucesso!");
                 window.location = "login.html";
                 form_limpeza();
-                finalizarAguardar();
+                
             } else {
                 throw("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+            
         });
 
         return false;

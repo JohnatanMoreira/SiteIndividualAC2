@@ -58,8 +58,8 @@
                 <h2 style="margin-bottom: 40px;">Olá Gamer!</h2>
                 <div class="formulario">
                     <form id="form_login" method="post" onsubmit="return entrar()">
-                        E-mail:
-                        <input name="email" type="text" placeholder="Login">
+                        Nickname:
+                        <input name="nickname" type="text" placeholder="Login">
                         <br>
                         Senha:
                         <input name="senha" type="password" placeholder="******">
@@ -101,26 +101,19 @@
     }
 
     function entrar() {
-        aguardar();
+        
 
         var formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
 
-        var email = formulario.get("email");
+        var nickname = formulario.get("nickname");
         var senha = formulario.get("senha");
 
-        console.log("FORM LOGIN: ", email);
+        console.log("FORM LOGIN: ", nickname);
         console.log("FORM SENHA: ", senha);
 
 
-        if (email == "" || senha == "") {
+        if (nickname == "" || senha == "") {
             window.alert("Preencha todos os campos para prosseguir!");
-            finalizarAguardar();
-            return false;
-        }
-
-        if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
-            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            finalizarAguardar();
             return false;
         }
 
@@ -137,13 +130,13 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NICKNAME_USUARIO = json.nickname;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.EMAIL = json.email;
+                    sessionStorage.NICKNAME = json.nickname;
+                    sessionStorage.ID_CADASTRO = json.idcadastro;
 
                     setTimeout(function () {
                         window.location = "./dashboard.html";
-                    }, 1000); // apenas para exibir o loading
+                    }, 1000);
 
                 });
 

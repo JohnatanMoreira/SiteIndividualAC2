@@ -21,118 +21,119 @@
         rel="stylesheet">
 </head>
 
-<body class="body">
-    <div class="header">
-
-        <div class="container1">
-
-            <img id="warzonelogo" src="./imagens/logo call of duty header.png">
-           
-        </div>
-        
-
-        <div class="container">
-        <ul class="navbar">
-
-                <li>
-                <li class="agora">
-                    <a class="links" href="./index.html"> Inicial</a>
-                </li>
-                <li>
-                    <a class="links" href="./camp.html">Championship</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a class="links" href="./login.html">Login</a>
-                </li>
-                <li>
-                    <a class="links" href="./cadastro.html">Cadastro</a>
-                </li>
-        </ul>
-        </div>
-    </div>
-
-    </div>
-
-    <div class="bannerindex">
-        <div class="container_p">
-            <p>
-                Bem vindo ao <span> Call of Duty <br></span> O game <span> Best-Seller </span> do século 21.
-            </p>
-        </div>
-    </div>
-
-    <div class="titulo_sobre">
-        <h1>Sobre o Call of Duty</h1><br><br>
-        
-        <h3>Call of Duty (frequentemente abreviado como CoD) é uma série de jogos eletrônicos de guerra, ação e tiro em primeira pessoa publicado pela Activision e desenvolvida pela Infinity Ward, pela Sledgehammer Game Studio e pela Treyarch, com as empresas se revezando a cada lançamento. O primeiro título da série começou no computador, mais tarde expandindo-se para os vários tipos de consoles. Também foram lançados vários jogos spin-off. Os primeiros títulos da série se concentraram em jogos ambientados na Segunda Guerra Mundial, apresentando batalhas e acontecimentos históricos daquele período. Com o tempo, a série viu jogos ambientados na Guerra Fria, em tempos atuais, mundos futuristas até o espaço sideral.
-
-            Os jogos da série Call of Duty são publicados e propriedade da Activision. Enquanto que o estúdio Infinity Ward ainda é o principal produtor, a Treyarch também já produziu alguns títulos onde a história está interligada entre eles. Alguns jogos já foram produzidos pela Gray Matter Interactive, Nokia, Exakt Entertainment, Spark Unlimited, Amaze Entertainment, n-Space, Aspyr, Rebellion Developments, Ideaworks Game Studio, Sledgehammer Games e nStigate Games. Os jogos usam vários motores incluindo id Tech 3, o Treyarch NGL e o IW 5.0.
+<body class="body">    
+     
+        <div class="header">
             
-            Em janeiro de 2016, já tinham sido vendidas mais de 250 milhões de cópias de jogos Call of Duty.[1] Em particular, Call of Duty: Black Ops é o jogo mais vendido da série, com um total de 30.5 milhões de cópias vendidas. De acordo com a Activision, as vendas dos jogos Call of Duty já ultrapassaram os US$15 bilhões.</h3>
-    </div>
-    <div class="gifs">
-        <div class="gif1">
-            <img src=".\imagens\gif parachute.gif" alt="">
-        </div>
-        <div class="gif2">
-            <img src=".\imagens\gif prison.gif"" alt="">
-        </div>
-        <div class="gif3">
-            <img src=".\imagens\sniper kill double.gif"" alt="">
-        </div>
-    </div>
-<div class="titulo_grafs">
-
-    <h1>Clique para ver a classe mais utilizada na semana!</h1><br><br>
-    
-</div>
-    <div id="qds" class="quadros">
-
-        <div class="quadro1" onclick="ver_graf()"><h2>PISTOLS</h2></div>
-        <div class="quadro2" onclick="ver_graf()"><h2>ASSAULTS</h2></div>
-        <div class="quadro3" onclick="ver_graf()"><h2>SNIPERS</h2></div>
-        <div class="quadro4" onclick="ver_graf()"><h2>MELEES</h2></div>
-        <div class="quadro5" onclick="ver_graf()"><h2>SUBMACHINEGUNS</h2></div>
-        
-    </div>
-    <div class="titulo_grafs">
-
-        
-        <button id="btn" class="btn_voltar"onclick="voltar()" style="display: none;">Voltar</button>
-    </div>
-    <div id="grafico_armas" class="graf" style="display: none;">
-    <div class="grafico">
-            <canvas id="myChart" style="width: 100%; height: 100%;"> </canvas>
-        
-    </div>
-</div>
-    <footer>
-        <h4>Call of Duty &copy; 2021</h4>
-    </footer>
-</body>
-
-</html>
-
-<script>
-    function ver_graf(){
-            grafico_armas.style.display = 'block';
-            btn.style.display = 'block';
-            armas();
-            grafico();
-            window.scroll(0, 2000);
-         }
-   
-   function grafico(){
-       var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['NÚMERO DE USOS'],
-            datasets: [{
-                label: 'PISTOLS',
+            <div class="container1">
                 
-                data: [valorarmas[4]],
+                <img id="warzonelogo" src="./imagens/logo call of duty header.png">
+                
+            </div>
+            
+            
+            <div class="container">
+                <ul class="navbar">
+                    
+                    <li>
+                        <li class="agora">
+                            <a class="links" href="./index.html"> Inicial</a>
+                        </li>
+                        <li>
+                            <a class="links" href="./camp.html">Championship</a>
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <a class="links" href="./login.html">Login</a>
+                        </li>
+                        <li>
+                            <a class="links" href="./cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="bannerindex">
+            <div class="container_p">
+                <p>
+                    Bem vindo ao <span> Call of Duty <br></span> O game <span> Best-Seller </span> do século 21.
+                </p>
+            </div>
+        </div>
+        
+        <div class="titulo_sobre">
+            <h1>Sobre o Call of Duty</h1><br><br>
+            
+            <h3>Call of Duty (frequentemente abreviado como CoD) é uma série de jogos eletrônicos de guerra, ação e tiro em primeira pessoa publicado pela Activision e desenvolvida pela Infinity Ward, pela Sledgehammer Game Studio e pela Treyarch, com as empresas se revezando a cada lançamento. O primeiro título da série começou no computador, mais tarde expandindo-se para os vários tipos de consoles. Também foram lançados vários jogos spin-off. Os primeiros títulos da série se concentraram em jogos ambientados na Segunda Guerra Mundial, apresentando batalhas e acontecimentos históricos daquele período. Com o tempo, a série viu jogos ambientados na Guerra Fria, em tempos atuais, mundos futuristas até o espaço sideral.
+                
+                Os jogos da série Call of Duty são publicados e propriedade da Activision. Enquanto que o estúdio Infinity Ward ainda é o principal produtor, a Treyarch também já produziu alguns títulos onde a história está interligada entre eles. Alguns jogos já foram produzidos pela Gray Matter Interactive, Nokia, Exakt Entertainment, Spark Unlimited, Amaze Entertainment, n-Space, Aspyr, Rebellion Developments, Ideaworks Game Studio, Sledgehammer Games e nStigate Games. Os jogos usam vários motores incluindo id Tech 3, o Treyarch NGL e o IW 5.0.
+                
+                Em janeiro de 2016, já tinham sido vendidas mais de 250 milhões de cópias de jogos Call of Duty.[1] Em particular, Call of Duty: Black Ops é o jogo mais vendido da série, com um total de 30.5 milhões de cópias vendidas. De acordo com a Activision, as vendas dos jogos Call of Duty já ultrapassaram os US$15 bilhões.</h3>
+            </div>
+            <div class="gifs">
+                <div class="gif1">
+                    <img src=".\imagens\gif parachute.gif" alt="">
+                </div>
+                <div class="gif2">
+                    <img src=".\imagens\gif prison.gif"" alt="">
+                </div>
+                <div class="gif3">
+                    <img src=".\imagens\sniper kill double.gif"" alt="">
+                </div>
+            </div>
+            <div class="titulo_grafs">
+                
+                <h1>Clique para ver a classe mais utilizada na semana!</h1><br><br>
+                
+            </div>
+            <div id="qds" class="quadros">
+                
+                <div class="quadro1" onclick="ver_graf()"><h2>PISTOLS</h2></div>
+                <div class="quadro2" onclick="ver_graf()"><h2>ASSAULTS</h2></div>
+                <div class="quadro3" onclick="ver_graf()"><h2>SNIPERS</h2></div>
+                <div class="quadro4" onclick="ver_graf()"><h2>MELEES</h2></div>
+                <div class="quadro5" onclick="ver_graf()"><h2>SUBMACHINEGUNS</h2></div>
+                
+            </div>
+            <div class="titulo_grafs">
+                
+                
+                <button id="btn" class="btn_voltar"onclick="voltar()" style="display: none;">Voltar</button>
+            </div>
+            <div id="grafico_armas" class="graf" style="display: none;">
+                <div class="grafico">
+                    <canvas id="myChart" style="width: 100%; height: 100%;"> </canvas>
+                    
+                </div>
+            </div>
+            <footer>
+                <h4>Call of Duty &copy; 2021</h4>
+            </footer>
+        </body>
+        
+        </html>
+        
+        <script>
+            function ver_graf(){
+                grafico_armas.style.display = 'block';
+                btn.style.display = 'block';
+                armas();
+                grafico();
+                window.scroll(0, 2000);
+            }
+            
+            function grafico(){
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['NÚMERO DE USOS'],
+                        datasets: [{
+                            label: 'PISTOLS',
+                            
+                            data: [valorarmas[4]],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)'
 
@@ -213,7 +214,7 @@
 
 function armas(){
 
-for (var index = 0; index < 5; index++) {
+for (var contador = 0; contador < 5; contador++) {
     var aleatorio = (Math.random()*99+1).toFixed(0);
 
     valorarmas.push(aleatorio);
@@ -221,4 +222,13 @@ for (var index = 0; index < 5; index++) {
 }
 
 }
+
+var intervalo = setInterval(function () {
+    
+    clearInterval(intervalo);
+
+    document.getElementById("carregar_video").style.display = "none";
+    document.getElementById("mostrar_site").style.display = "block";
+
+}, 10000);
 </script>
