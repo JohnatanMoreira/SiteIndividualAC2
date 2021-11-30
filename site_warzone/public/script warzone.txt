@@ -1,0 +1,30 @@
+create database individual;
+
+use individual;
+
+create table cadastro (
+idcadastro int primary key auto_increment,
+nickname varchar (45) unique,
+senha varchar (45),
+email varchar (60) unique,
+fkjogofavorito int,
+foreign key (fkjogofavorito) references jogofavorito (idjogofavorito));
+
+
+create table jogofavorito (
+idjogofavorito int primary key auto_increment,
+nomejogo varchar(45));
+
+insert into cadastro values
+(null,"SweezhIV","1234","johnatan.moreira@bandtec.com.br",1),
+(null,"Manito0110","1234","manito.manito@bandtec.com.br",2),
+(null,"Cleefens","1234","cleefens.cleefens@bandtec.com.br",3),
+(null,"Lukao","1234","lukao@gmail.com.br",4),
+(null,"Felipera","1234","felipera.felipera@gmail.com.br",5);
+
+insert into jogofavorito values
+(1,"MODERN WARFARE"),
+(2,"ADVANCED WARFARE"),
+(3,"BLACK OPS 4"),
+(4,"BLACK OPS 2"),
+(5,"COD WARZONE");

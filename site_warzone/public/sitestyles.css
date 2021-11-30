@@ -707,10 +707,10 @@ form {
 }
 
 .gif1{
-    width: 600px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
     border: 3px solid rgb(255, 115, 0);
-    margin-right: 40px;
+    margin-right: 60px;
     display: flex;
   justify-content: center;
   align-items: center;
@@ -719,10 +719,10 @@ form {
 }
 
 .gif2{
-  width: 600px;
-  height: 600px;
+  width: 300px;
+  height: 300px;
   border: 3px solid rgb(255, 115, 0);
-  margin-right: 40px;
+  margin-right: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -731,8 +731,8 @@ form {
 }
 
 .gif3{
-  width: 600px;
-  height: 600px;
+  width: 300px;
+  height: 300px;
   border: 3px solid rgb(255, 115, 0);
   margin-right: 40px;
   display: flex;
@@ -753,17 +753,21 @@ form {
   font-weight: bolder;
 }
     .textocod{
-        background-color: rgba(0, 0, 0, 0.767);
-        margin: 0;
+        background-color: rgba(0, 0, 0, 0.9);
         padding: 0;
         font-size: 30px;
         color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
         .div_textocod{
-            width: 100%;
+            width: 80%;
             margin-top: 3%;
             text-shadow: greenyellow;
             color: white;
+            align-items: center;
+            
             
 
 

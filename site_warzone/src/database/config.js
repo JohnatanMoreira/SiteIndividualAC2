@@ -5,8 +5,7 @@ var mySqlConfig = {
     host: "localhost",
     user: "root",
     database: "individual",
-    password: "1234",
-    port: "3306",
+    password: "bandtec"
 };
 
 
