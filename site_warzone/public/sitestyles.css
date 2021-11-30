@@ -752,3 +752,23 @@ form {
   color: white;
   font-weight: bolder;
 }
+    .textocod{
+        background-color: rgba(0, 0, 0, 0.767);
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        color: white;
+    }
+        .div_textocod{
+            width: 100%;
+            margin-top: 3%;
+            text-shadow: greenyellow;
+            color: white;
+            
+
+
+
+
+
+
+}
